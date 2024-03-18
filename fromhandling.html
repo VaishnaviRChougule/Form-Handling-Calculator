@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+
+        <input type="text" name="num1" id="num1" placeholder="Enter 1st number"><br><br>
+        <input type="text" name="num2" id="num2" placeholder="Enter 2nd number"><br><br>
+        <input type="text" name="op" id="op" placeholder="Select Operation"><br><br>
+        <input type="text" name="result" id="result"><br><br>
+
+        <input type="submit" value="Calculate">
+
+    </form>
+
+    <script>
+
+        var form = document.querySelector('#myform');
+
+        form.addEventListener('submit', function(e){
+
+            e.preventDefault();
+
+            var a = parseInt(document.querySelector('#num1').value);
+            var b = parseInt(document.querySelector('#num2').value);
+            var op = document.querySelector('#op').value;
+
+            var res = eval(a + op + b);
+
+            document.querySelector('#result').value=res;
+            
+        })
+
+
+    </script>
+</body>
+</html>
